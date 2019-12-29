@@ -1,0 +1,40 @@
+.main-content
+  .nav-current
+    %ul.month-move
+      %li.left
+        <
+      %li.center
+        2019年12月
+        %i.material-icons
+        = icon('fas', 'edit', class: 'icon')
+        
+      %li.right
+        >
+  .table-calender
+    #calendar
+  .result_table
+    %ul.result_table__content
+      %li.income 収入 
+      %p.int
+        100,000
+      %li.spending 支出
+      %p.int
+        50,000
+      %li.total 合計
+      %p.int
+        50,000
+      %li.month-budget 今月の予算
+      %p.int
+        200,000
+      %li.savings 貯金額
+      %p.int
+        150,000
+  .footer
+    .container
+      .footer-left
+        %p このサイトをシェアする
+        %a.twitter-share-button{"data-show-count" => "false", "data-text" => "Money plan", :href => "https://twitter.com/share?ref_src=twsrc%5Etfw"} Tweet
+        %script{:async => "", :charset => "utf-8", :src => "https://platform.twitter.com/widgets.js"}
+      .footer-right
+        あ
+      .clear

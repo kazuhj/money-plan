@@ -1,0 +1,83 @@
+.main-content {
+  padding: 100px;
+  background-color: honeydew;
+}
+
+.table-calender {
+  z-index: -2;
+  background-color: white;
+}
+
+.nav-current {
+  
+  font-size: 30px;
+  background-color: white;
+  margin: 25px;
+  padding: 20px;
+}
+
+.left {
+  float: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  float: right;
+  position: absolute;
+  right: 150px;
+  top: 145px;
+}
+
+.result_table {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+
+.result_table ul {
+  margin: 30px;
+}
+
+.result_table ul li{
+  display: inline;
+  position: relative;
+  top: 15px;
+  font-size: 20px;
+  margin-left: 10px;
+  color: gray;
+  
+}
+
+
+
+.int {
+  display: inline;
+  color: black;
+  position: relative;
+  top:50px;
+  right: 85px;
+  font-size: 20px;
+}
+
+.income {
+  height: 150px;
+  width: 60px;
+}
+
+.fc-view {
+  z-index: 0;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-color: darkgray;
+  margin-top: 30px;
+  padding: 10px 0 5px 10px;
+}
+
