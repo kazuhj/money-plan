@@ -1,0 +1,21 @@
+%body
+  .navbar-header
+    .navbar-header__left
+      %a.navbar-brand{href: "/calender"}
+        %img.header-logo{alt: "Money-plan", src: "//zaim-assets.s3-ap-northeast-1.amazonaws.com/assets/common/logo-default-160-20f4884d3ebcb6789b888a5fe11150841063af00821c6b2a509ab57edbfb4e38.png"}/
+      .navbar-header__left__graph
+        %i.material-icons
+          = icon('fas', 'chart-pie', class: 'icon')
+          グラフ
+      .navbar-header__left__target
+        %i.material-icons
+          = icon('fas', 'gifts', class: 'icon') 
+          予算+ご褒美
+    .navbar-header__right
+      .configuration
+        %i.material-icons
+          = icon('fas', 'edit', class: 'icon')
+          設定
+    .clear
+
+
