@@ -4,5 +4,8 @@
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 @import "./reset";
+@import "config/colors";
 @import "./navbar";
+@import "./users.scss";
 @import "./main_content.scss";
+@import "modules/flash";
