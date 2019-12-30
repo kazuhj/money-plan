@@ -1,21 +1,52 @@
-#account-page.account-page
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h2 Edit Account
-      %h5 アカウントの編集
-      = link_to "ログアウト", destroy_user_session_path,method: :delete, class: 'btn'
-      = link_to "トップページに戻る", :back, class: 'btn'
-    .account-page__inner--right.user-form
-      =form_for(current_user) do |f|
-        .field
-          .field-label
-            = f.label :name
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
-            = f.label :email
-          .field-input
-            = f.email_field :email
-        .actions
-          =f.submit "変更を保存する", class:'btn'
+.navbar-header
+  .navbar-header__left
+    %a.navbar-brand{href: "/calender"}
+      %img.header-logo{alt: "Money-plan", src: "//zaim-assets.s3-ap-northeast-1.amazonaws.com/assets/common/logo-default-160-20f4884d3ebcb6789b888a5fe11150841063af00821c6b2a509ab57edbfb4e38.png"}/
+    .navbar-header__left__graph
+      %i.material-icons
+        = icon('fas', 'chart-pie', class: 'icon')
+        グラフ
+    .navbar-header__left__target
+      %i.material-icons
+        = icon('fas', 'gifts', class: 'icon') 
+        予算+ご褒美
+  .navbar-header__right
+    .configuration
+      %i.material-icons
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'edit', class: 'icon')
+        設定
+    .logout
+      %i.material-icons
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'sign-out-alt', class: 'icon')
+        ログアウト
+    .explanation
+      %i.material-icons
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'clipboard', class: 'icon')
+        使いかた
+  .clear
+.main-content
+  #account-page.account-page
+    .account-page__inner.clearfix
+      .account-page__inner--left.account-page__header
+        %h2 Edit Account
+        %h5 アカウントの編集
+        = link_to "ログアウト", destroy_user_session_path,method: :delete, class: 'btn'
+        = link_to "トップページに戻る", :back, class: 'btn'
+      .account-page__inner--right.user-form
+        =form_for(current_user) do |f|
+          .field
+            .field-label
+              = f.label :name
+            .field-input
+              = f.text_field :name, autofocus: true
+          .field
+            .field-label
+              = f.label :email
+            .field-input
+              = f.email_field :email
+          .actions
+            =f.submit "変更を保存する", class:'btn'
+.footer-login
