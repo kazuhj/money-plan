@@ -17,6 +17,16 @@
           = link_to edit_user_path(current_user) do
             = icon('fas', 'edit', class: 'icon')
           設定
+      .logout
+        %i.material-icons
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'sign-out-alt', class: 'icon')
+          ログアウト
+      .explanation
+        %i.material-icons
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'clipboard', class: 'icon')
+          使いかた
     .clear
 
 
