@@ -18,7 +18,7 @@
         設定
     .logout
       %i.material-icons
-        = link_to edit_user_path(current_user) do
+        = link_to  destroy_user_session_path,method: :delete, class: 'btn' do
           = icon('fas', 'sign-out-alt', class: 'icon')
         ログアウト
     .explanation
