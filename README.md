@@ -32,22 +32,17 @@ Things you may want to cover:
 |name|string|null: false|
 ### Association
 - has_meny :days
+- has_one :target
 
-## daysテーブル
+## inputsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|spending|integer|default: 0|
-|income|integer|default: 0|
-|spending_tag_id|string|foreign_key: true|
-|income_tag_id|string|foregin_key: true|
-|note|text|limit: 30|
-|date|date| |
 |user_id|integer|foregin_key: true|
 |month_id|integer|foregin_key: true|
 ### Association
 - belongs_to :user
-- belongs_to :spending_tag
-- belongs_to :income_tag
+- has_meny :income_values
+- has_meny :cost_values
 - belongs_to :month
 
 ## monthsテーブル
@@ -59,7 +54,7 @@ Things you may want to cover:
 |month saving|integer|default: 0|
 |target_id|integer|foreign_key: true|
 ### Association
-- has_meny :days
+- has_meny :inputs
 - belongs_to :target
 
 ## targetsテーブル
@@ -72,17 +67,46 @@ Things you may want to cover:
 |total saving|integer|default: 0|
 ### Association
 - has_meny :months
+- has_one :user
 
-## spending_tagsテーブル
+## income_valuesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|default: "食費"|
+|date|date| |
+|value|integer|default: 0|
+|description|string|
+|input_id|integer|foreign_key: true|
 ### Association
-- has_meny :days
+- has_meny :incomes
+- belongs_to :input
 
-## income_tagsテーブル
+## incomesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|default: "給料"|
+|name|string||
+|description|string|limit: 30|
+|income_value_id|integer|foreign_key: true|
+
 ### Association
-- has_meny :days
+- belongs_to :income_value
+
+## cost_valuesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|date|date| |
+|value|integer|default: 0|
+|description|string|
+|input_id|integer|foreign_key: true|
+### Association
+- has_meny :costs
+- belongs_to :input
+
+## costsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|description|string|limit: 30|
+|cost_value_id|integer|foreign_key: true|
+
+### Association
+- belongs_to :cost_value
