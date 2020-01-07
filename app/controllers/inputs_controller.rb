@@ -1,5 +1,6 @@
 class InputsController < ApplicationController
   def index
+    
   end
 
   def show

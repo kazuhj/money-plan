@@ -1,3 +1,249 @@
-// Place all the styles related to the inputs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.container {
+  padding-top: 120px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width:100%;
+}
+
+
+
+.col-md-8,.col-lg-12,.col-xs-12,.col-lg-9 {
+  position: relative;
+  min-height: 1px;
+  padding: 0 15px;
+}
+
+.breadcrumb {
+  background-color: #f0f0e0;
+  padding-left: 0;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+}
+
+.breadcrumb>li {
+  display: inline-block;
+}
+
+.breadcrumb>.active {
+  color: #777777;
+  padding-left: 20px;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.navbar {
+  border: 0;
+  border-radius: 0;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+}
+
+.nav {
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav>li {
+  position: relative;
+  display: block;
+}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+}
+
+.navbar-nav>li>a {
+  line-height: 20px;
+}
+
+#navbar-sub .navbar .nav .active>a {
+  color: #fff !important;
+  background-color: #48A322 !important;
+  -moz-box-shadow: 0 0px 0px transparent;
+  -webkit-box-shadow: 0 0px 0px transparent;
+  box-shadow: 0 0px 0px transparent;
+}
+
+#navbar-sub .navbar .nav>li>a {
+  padding: 14px 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 16px;
+  text-shadow: 0 0 0 transparent;
+  background-color: #555555;
+}
+
+#navbar-sub .navbar .nav.nav3col li {
+  width: 33%;
+}
+
+.navbar-nav>li {
+  float: left;
+}
+
+.main-contents.main-bg-index {
+  background-color: #fff;
+  border-radius: 8px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.main-contents .page-header {
+  border: none;
+  padding-bottom: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 0;
+  background-color: lightgreen;
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.page-header {
+  margin: 0;
+}
+
+.page-header h2 {
+  margin-top: 0;
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.page-header h2>span {
+  padding-top: 10px;
+}
+
+.main-contents .description {
+  font-size: 18px;
+  padding: 20px;
+  line-height: 1.7;
+  background-color: lightgreen;
+}
+
+.tab-content>.active {
+  display: block;
+}
+
+.form-input {
+  padding: 0;
+  font-size: 15px;
+  margin: auto;
+}
+
+.jpy {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.row {
+  position: relative;
+}
+
+.col-xs-3 {
+  width: 25%;
+  float: left;
+}
+
+.form-input input[type="text"] {
+  margin: 0;
+  padding: 0 5px;
+  height: 36px !important;
+  width: 90%;
+  vertical-align: middle;
+  line-height: 1.2;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border: 1px solid #ccc;
+  font-weight: normal;
+}
+
+.form-horizontal .form-group {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.control-input-summary {
+  padding: 20px 0 0 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input label {
+  display: inline-block;
+}
+
+.form-horizontal .control-label {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.form-group .control-label {
+  color: rgba(0,0,0,0.84);
+}
+
+.form-horizontal .control-label {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.control-input-summary #receipt-total-amount {
+  font-size: 40px;
+  line-height: 1.5;
+}
+
+label {
+  font-weight: normal;
+}
+
+.control-value {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.form-input .control-group {
+  clear: both;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 20px;
+}
+
+.btn-success:not(.btn-link):not(.btn-flat) {
+  background-color: orange;
+}
+
+.form-input .btn-input {
+  padding: 10px 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-input {
+  color: #ffffff;
+}
+
+.btn-block {
+  display: block;
+  width: 50%;
+}
+
+.btn-lg {
+  ine-height: 1.33333;
+}

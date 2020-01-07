@@ -1,8 +1,13 @@
 %body
   .navbar-header
     .navbar-header__left
-      %a.navbar-brand{href: "/calender"}
+      = link_to root_path(current_user) do
         %img.header-logo{alt: "Money-plan", src: "//zaim-assets.s3-ap-northeast-1.amazonaws.com/assets/common/logo-default-160-20f4884d3ebcb6789b888a5fe11150841063af00821c6b2a509ab57edbfb4e38.png"}/
+      .navbar-header__left__graph
+        %i.material-icons
+          = link_to inputs_path(current_user) do
+            = icon('fas', 'coins', class: 'icon')
+          金額入力
       .navbar-header__left__graph
         %i.material-icons
           = icon('fas', 'chart-pie', class: 'icon')
