@@ -1,0 +1,95 @@
+.wrapper
+  = render 'shared/navbar'
+  .container
+    .col-lg-12.breadcrumb-wrapper
+      %ul.breadcrumb{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
+        %li
+          = link_to root_path(current_user) do
+            %span{itemprop: "title"} HOME
+          %li.active 入力
+    .row{style: "height: auto !important;"}
+      .col-md-8.col-xs-12{style: "height: auto !important; min-height: 0px !important;"}
+        #navbar-sub
+          %nav.navbar
+            %ul.nav.navbar-nav.nav3col
+              %li.active
+                %a{"data-toggle" => "tab",href: "#"} 支出
+              %li#toggle-income.active
+                %a{"data-toggle" => "tab",href: "#income"} 収入
+        .wrap
+          .main-contents.main-bg-index
+            .page-header
+              %h2
+                %span 家計簿を入力
+            .description
+              .tab-content
+                .tab-pane.active
+                  .form-horizontal
+                    %form.form-input.receipt-form.monry-form
+                      .jpy
+                        .row
+                          .col-xs-3 品目名
+                          .col-xs-3
+                            %span.default-category-name カテゴリ
+                            %span.small-category-name 分類
+                            = link_to root_path(current_user) do
+                              = icon('fas', 'edit', class: 'icon')
+                          .col-xs-3 金額
+                          .col-xs-3 メモ
+                        .row.receipt-item-row
+                          .id
+                            %input#receipt_items__id{name: "receipt[items][][id]",type: "hidden"}/
+                          .col-xs-3.name
+                            %input#receipt_items__name{name: "receipt[items][][name]",type: "text", value: ""}/
+                          .col-xs-3.category
+                            %input#receipt_items__payment_genre.input_genre.local.ui-autocomplete-input{autocomplete: "off",name: "receipt[items][][payment_genre]",type: "text"}/
+                          .col-xs-3.amount
+                            %input#receipt_items__amount.input-amount-for-receipt.hasCalculator{autocomplete: "off",name: "receipt[items][][amount]",type: "text"}/
+                          .col-xs-3.comment
+                            %input#receipt_items__comment{name: "receipt[items][][comment]",type: "text",value: ""}/
+                        .row.receipt-item-row
+                          .id
+                            %input#receipt_items__id{name: "receipt[items][][id]",type: "hidden"}/
+                          .col-xs-3.name
+                            %input#receipt_items__name{name: "receipt[items][][name]",type: "text", value: ""}/
+                          .col-xs-3.category
+                            %input#receipt_items__payment_genre.input_genre.local.ui-autocomplete-input{autocomplete: "off",name: "receipt[items][][payment_genre]",type: "text"}/
+                          .col-xs-3.amount
+                            %input#receipt_items__amount.input-amount-for-receipt.hasCalculator{autocomplete: "off",name: "receipt[items][][amount]",type: "text"}/
+                          .col-xs-3.comment
+                            %input#receipt_items__comment{name: "receipt[items][][comment]",type: "text",value: ""}/
+                        .row.receipt-item-row
+                          .id
+                            %input#receipt_items__id{name: "receipt[items][][id]",type: "hidden"}/
+                          .col-xs-3.name
+                            %input#receipt_items__name{name: "receipt[items][][name]",type: "text", value: ""}/
+                          .col-xs-3.category
+                            %input#receipt_items__payment_genre.input_genre.local.ui-autocomplete-input{autocomplete: "off",name: "receipt[items][][payment_genre]",type: "text"}/
+                          .col-xs-3.amount
+                            %input#receipt_items__amount.input-amount-for-receipt.hasCalculator{autocomplete: "off",name: "receipt[items][][amount]",type: "text"}/
+                          .col-xs-3.comment
+                            %input#receipt_items__comment{name: "receipt[items][][comment]",type: "text",value: ""}/
+                      .form-group.control-input-summary
+                        %label.col-lg-3.control-label 合計金額
+                        #receipt-total-amount.col-lg-9
+                          ¥
+                          .val{style: "display: inline;"} 0
+                          %span.material-input
+                      .form-group
+                        %label.col-lg-3.control-label 日付
+                        .col-lg-9.control-value
+                          %input#receipt_date.input_date.hasDatepicker{name: "receipt[date]",type: "text",value: "2020年1月5日（日）"}/
+                      .control-group
+                        %button.btn.btn-success.btn-input.btn-block.btn-lg{type: "submit"} 入力する
+
+
+
+
+
+
+
+
+
+
+
+
