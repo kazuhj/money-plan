@@ -32,6 +32,8 @@
                           .col-xs-3
                             %span.default-category-name カテゴリ
                             %span.small-category-name 分類
+                            = link_to root_path(current_user) do
+                              = icon('fas', 'edit', class: 'icon')
                           .col-xs-3 金額
                           .col-xs-3 メモ
                         .row.receipt-item-row
