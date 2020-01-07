@@ -1,0 +1,22 @@
+- @page_title = "支出科目一覧"
+%h2= @page_title
+
+= link_to "支出科目の新規登録", :new_cost
+= link_to "金額入力画面に戻る", :inputs
+
+- if @costs.present?
+  %table
+    %thead
+      %tr
+        %th 科目名
+        %th 備考
+        %th 操作
+    %tbody
+      - @costs.each do |cost|
+        %tr
+          %td= cost.name
+          %td= cost.description
+          %td= link_to "編集", [:edit, cost]
+          %td= link_to "削除", cost, method: :delete
+- else
+  %p 登録されている支出科目がありません。

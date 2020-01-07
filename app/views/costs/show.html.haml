@@ -1,0 +1,13 @@
+%h2 支出科目の詳細
+
+=link_to "編集", [:edit, @cost]
+=link_to "支出科目一覧へ戻る", :costs
+
+%table
+  %tr
+  %th 名称
+  %td= @cost.name
+
+  %tr
+    %th 説明
+    %td= @cost.description
