@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root "calenders#index"
   resources :users, only: [:edit, :update]
   resources :inputs
+  resources :costs
 end
