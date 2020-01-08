@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   resources :inputs
   resources :costs
+  resources :incomes
 end

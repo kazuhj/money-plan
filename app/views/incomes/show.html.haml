@@ -1,0 +1,12 @@
+%h2 収入科目の詳細
+
+= link_to "編集", [:edit, @income]
+= link_to "収入科目一覧へ戻る", :incomes
+
+%table
+  %tr
+  %th 名称
+  %td= @income.name
+  %tr
+    %th 説明
+    %td= @income.description 

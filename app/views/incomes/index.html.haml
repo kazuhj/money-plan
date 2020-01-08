@@ -1,0 +1,22 @@
+- @page_title = "収入科目一覧"
+%h2= @page_title
+
+= link_to "収入科目の新規登録", :new_income
+= link_to "金額入力画面に戻る", :inputs
+
+- if @incomes.present?
+  %table
+    %thead
+      %tr
+        %th 科目名
+        %th 備考
+        %th 操作
+    %tbody
+      - @incomes.each do |income|
+        %tr
+          %td= income.name
+          %td= income.description
+          %td= link_to "編集", [:edit, income]
+          %td= link_to "削除", income, method: :delete
+- else
+  %P 登録されている収入科目がありません。
