@@ -1,0 +1,2 @@
+class CostValue < ApplicationRecord
+end
