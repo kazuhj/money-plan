@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :inputs
   resources :costs
   resources :incomes
+  resources :cost_values
 end
