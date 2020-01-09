@@ -31,7 +31,7 @@ Things you may want to cover:
 |password|string|null: false|
 |name|string|null: false|
 ### Association
-- has_meny :days
+- has_meny :inputs
 - has_one :target
 
 ## inputsテーブル
@@ -43,19 +43,21 @@ Things you may want to cover:
 - belongs_to :user
 - has_meny :income_values
 - has_meny :cost_values
-- belongs_to :month
+- has_one :month
 
 ## monthsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|total_spending|integer|default: 0|
+|date|date| |
+|total_cost|integer|default: 0|
 |total_income|integer|default: 0|
-|budget|integer|default: 0|
 |month saving|integer|default: 0|
 |target_id|integer|foreign_key: true|
 ### Association
-- has_meny :inputs
+- has_one :inputs
 - belongs_to :target
+- has_meny :cost_value, through: :inputs
+- has_meny :income_value, through: :inputs
 
 ## targetsテーブル
 |Column|Type|Options|
@@ -65,6 +67,7 @@ Things you may want to cover:
 |money|integer|default: 0|
 |remaining money|integer|default: 0|
 |total saving|integer|default: 0|
+|user_id|integer|foreign_key: true|
 ### Association
 - has_meny :months
 - has_one :user
@@ -76,8 +79,9 @@ Things you may want to cover:
 |value|integer|default: 0|
 |description|string|
 |input_id|integer|foreign_key: true|
+|income_id|integer|foreign_key: true|
 ### Association
-- has_meny :incomes
+- belongs_to :income
 - belongs_to :input
 
 ## incomesテーブル
@@ -85,10 +89,8 @@ Things you may want to cover:
 |------|----|-------|
 |name|string||
 |description|string|limit: 30|
-|income_value_id|integer|foreign_key: true|
-
 ### Association
-- belongs_to :income_value
+- has_meny :income_values
 
 ## cost_valuesテーブル
 |Column|Type|Options|
@@ -97,8 +99,9 @@ Things you may want to cover:
 |value|integer|default: 0|
 |description|string|
 |input_id|integer|foreign_key: true|
+|cost_id|integer|foreign_key: true|
 ### Association
-- has_meny :costs
+- belongs_to :cost
 - belongs_to :input
 
 ## costsテーブル
@@ -106,7 +109,5 @@ Things you may want to cover:
 |------|----|-------|
 |name|string||
 |description|string|limit: 30|
-|cost_value_id|integer|foreign_key: true|
-
 ### Association
-- belongs_to :cost_value
+- has_meny :cost_values
